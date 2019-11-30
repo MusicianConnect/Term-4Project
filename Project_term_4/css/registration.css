@@ -1,0 +1,124 @@
+﻿ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+.newStyle2 {
+    font-size: x-large;
+}
+
+.newStyle5 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    position: left;
+    margin: 20px;
+    height: 450px;
+    width: 400px;
+    color: white;
+    text-align: left;
+}
+.capbox {
+    background-color: #808080;
+    border: #000000 0px solid;
+    border-width: 0px 5px 0px 0px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1; /* FOR IE7-8 */
+    padding: 8px 40px 8px 8px;
+}
+
+.capbox-inner {
+    font: bold 11px arial, sans-serif;
+    color: #000000;
+    background-color: #C0C0C0;
+    margin: 5px auto 0px auto;
+    padding: 3px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#CaptchaDiv {
+    font: bold 17px verdana, arial, sans-serif;
+    font-style: italic;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#CaptchaInput {
+    margin: 1px 0px 1px 0px;
+    width: 120px;
+}
+
+.txtbox {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 150px;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+    #myBtn:hover {
+        background: #ddd;
+        color: black;
+    }
+
