@@ -50,26 +50,13 @@
     height: 150px;
 }
 
- </style>
-
-     <script>
-       /* function openNav()
-        {
-            document.getElementById("mySidenav").style.width = "150px";
-
-        }*?
-
-        function closeNav()
-        {
-             document.getElementById("mySidenav").style.width = "0";
-         }
-
-     </script>
+        </style>
 </head>
 <body>
-    
+ <form id="form1" runat="server">   
  <div id="main">
      <span style="font-size:30px; position:absolute; cursor:pointer" onclick="openNav()">&#9776;</span>
+     <br />
 
      <h1><font color="white">Musician Connect</font></h1>
      <div class="topnav">
@@ -81,45 +68,61 @@
              
          
               <div class="search-container">
-                      <form id="form1" runat="server">
-                       <input type="text" placeholder="Search.." name="search"/>
-                       <button type="submit"><i class="fa fa-search"></i></button>
-                      </form>
-              </div>
-      </div>
-       
-      <h3><font color="White">My Profile</font></h3>
      
+            <asp:TextBox ID="TextBox1" placeholder="search..." runat="server"></asp:TextBox>
+            <asp:Button ID="Button1" runat="server" Text="Go" Height="35px" OnClick="Button1_Click" /> 
+                     
+                    
+    
+     
+     
+      </div>
+         
+   </div>
+     
+      <h3><font color="White">My Profile</font></h3>
+    
+
+     <asp:Label ID="Label6" runat="server" Text=""></asp:Label>
+     <br />
+     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+     &nbsp;<br />
+     <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+     <br />
+     <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+     <br />
+     <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
+     <br />
+     <asp:Label ID="Label5" runat="server" Text=""></asp:Label>
+     <br />
+     <br />
+
+    
          <div id="mySidenav" class="sidenav">
-             <br />
+             <br/>
 &nbsp;
 
              <div id="profile-container">
-                <image id="profileImage"  />
+                <img id="profileImage" src="images/avatar.png"  />
             </div>
                 <input id="imageUpload" type="file" 
                             name="profile_photo" placeholder="Photo" required="" capture>
           
          
              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <!--
-              <a class="active" href="Welcome_page.aspx">Home</a>
-              <a  href="First_Mainpage.aspx">Sign-In</a>
-          <a  href="Webform1.aspx">Sign-Up</a>
-              !-->
-          <a class="active" href="Welcome_page.aspx">Edit</a>
-          <a  href="Welcome_Page.aspx">Logout</a>
+             <br /><br />
+             <a  href="Edit.aspx">Edit</a>
+             <a  href="Welcome_Page.aspx">Logout</a>
          </div>
 
   </div>
-
-
+</form>
 <script>
         //side navigation code start
     function openNav()
     {
-        document.getElementById("main").style.marginLeft = "25%";
-        document.getElementById("mySidenav").style.width = "200px";
+        document.getElementById("main").style.marginLeft = "20%";
+        document.getElementById("mySidenav").style.width = "20%";
             
     }
     function closeNav()
@@ -143,10 +146,10 @@ function fasterPreview( uploader ) {
 
 $("#imageUpload").change(function(){
     fasterPreview( this );
-});
-        //image upload code end--- 
-
+    });
+    
 </script>
+   
 </body>
 
 </html>

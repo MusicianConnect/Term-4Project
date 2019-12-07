@@ -18,7 +18,7 @@ namespace Project_term_4
         {
 
         }
-
+        //REGISTRATION CODE
         protected void Button2_Click(object sender, EventArgs e)
         {
             string uname1 = this.TextBox1.Text;
@@ -27,19 +27,27 @@ namespace Project_term_4
             {
                 Response.Redirect("WebForm1.aspx");
             }
+            else if (uname1 == "" && password1 == "Please enter password")
+            {
+                Response.Redirect("WebForm1.aspx");
+            }
+
+            else if (uname1 == "Please enter username" && password1 == "")
+            {
+                Response.Redirect("WebForm1.aspx");
+            }
             else if(uname1=="" && password1=="")
             {
                 Response.Redirect("WebForm1.aspx");
             }          
         }
-
+        //LOGIN CODE
         protected void Button1_Click(object sender, EventArgs e)
         {
             string uname = this.TextBox1.Text;
             string password = this.TextBox2.Text;
             string message3 = "Please enter valid username and password";
             string title = "message";
-
             if (uname == "")
             {
                 this.TextBox1.Text = "Please enter username";
@@ -52,28 +60,30 @@ namespace Project_term_4
             else
             {
                 SqlConnection con = new SqlConnection(cnstring);//connection with sql server
+
                 con.Open();
-                try
-                {
-                    string login = "select * from reg where email='" + uname + "' and password='" + password + "'";
-                    SqlCommand cmd = new SqlCommand(login, con);
-                    SqlDataReader verify = cmd.ExecuteReader();
-                    if (verify.Read())
-                    {
-                        Response.Redirect("user_profile.aspx");
-                    }
-                    else
-                    {
-                        MessageBox.Show(message3, title);
-                    }
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
+                string login = "select * from reg where email='" + uname + "' AND password='" + password + "' ;";
 
-                }
+                SqlCommand cmd = new SqlCommand(login, con);
+                SqlDataReader verify = cmd.ExecuteReader();
 
+                if (verify.Read())
+                {
+                    Session["firstname"] = verify.GetValue(0).ToString();
+                    Session["lastname"] = verify.GetValue(1).ToString();
+                    Session["email"] = verify.GetValue(2).ToString();
+                    Session["gender"] = verify.GetValue(7).ToString();
+                    Session["musician"] = verify.GetValue(8).ToString();
+                    
+                    Response.Redirect("User_profie.aspx");
+                }
+                else
+                {
+                    MessageBox.Show(message3, title);
+                }
+                con.Close();
             }
+                    
         }
 
     }

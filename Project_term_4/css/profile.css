@@ -66,7 +66,8 @@
     padding: 0;
 }
 
-    .topnav a {
+    .topnav a 
+    {
         float: left;
         display: block;
         color: white;
@@ -75,20 +76,22 @@
         text-decoration: none;
         font-family: 'Courier New';
         font-size: 16px;
-        ;
+        
     }
-
-        .topnav a:hover {
+        .topnav a:hover
+        {
             background-color: #111;
             color: black;
         }
 
-        .topnav a.active {
+        .topnav a.active
+        {
             color: white;
         }
 
-    .topnav .search-container {
-        float: right;
+    .topnav .search-container
+    {
+        float:right;
     }
 
     .topnav input[type=text] {
@@ -109,7 +112,8 @@
         cursor: pointer;
     }
 
-        .topnav .search-container button:hover {
+        .topnav .search-container button:hover
+        {
             background: #ccc;
         }
 
@@ -156,3 +160,30 @@
         width: 150px;
         height: 150px;
     }
+/*curd operations code 
+table {
+    width: 100%;
+    font: 17px Calibri;
+}
+
+table, th, td {
+    border: solid 1px #DDD;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+
+input[type='button'] {
+    font: 15px Calibri;
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+}
+
+input[type='text'], select {
+    font: 17px Calibri;
+    text-align: center;
+    border: solid 1px #CCC;
+    width: auto;
+    padding: 2px 3px;
+}*/

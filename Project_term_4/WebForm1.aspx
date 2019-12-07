@@ -167,6 +167,7 @@ Type the above number:<br>
             </table>           
         </div>           
     </form >
+         </div>
     <script type="text/javascript">
 
 // Captcha Script

@@ -30,11 +30,11 @@ namespace Project_term_4
                         cmd.Parameters.AddWithValue("@Lastname", TextBox2.Text);
                         cmd.Parameters.AddWithValue("@email", TextBox3.Text);
                         cmd.Parameters.AddWithValue("@password", TextBox4.Text);
-                        cmd.Parameters.AddWithValue("@month", DropDownList1.SelectedValue);
-                        cmd.Parameters.AddWithValue("date", DropDownList2.SelectedValue);
-                        cmd.Parameters.AddWithValue("year", DropDownList3.SelectedValue);
-                        cmd.Parameters.AddWithValue("@gender", this.DropDownList4.SelectedValue);
-                        cmd.Parameters.AddWithValue("@musician", this.DropDownList5.SelectedValue);
+                        cmd.Parameters.AddWithValue("@month", DropDownList3.SelectedValue);
+                        cmd.Parameters.AddWithValue("date", DropDownList4.SelectedValue);
+                        cmd.Parameters.AddWithValue("year", DropDownList5.SelectedValue);
+                        cmd.Parameters.AddWithValue("@gender", this.DropDownList1.SelectedValue);
+                        cmd.Parameters.AddWithValue("@musician", this.DropDownList2.SelectedValue);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show(message1, title);
                         Response.Redirect("First_Mainpage.aspx");
@@ -42,8 +42,12 @@ namespace Project_term_4
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show(message2, title);
+                        
                     }
+            else
+            {
+                MessageBox.Show(message2, title);
+            }
             
            
         }
